@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 public partial class Main : Node2D {
 	
-	private float size = 500;
+	private float size = 200;
 	private int pointnum = 4000;
 
 	private Point[] points;
@@ -54,10 +54,6 @@ public override void _Ready() {
 
 	public override void _Draw() {
 
-		if (done) {
-			return;
-		}
-		
 		foreach (Point point in  points) {
 			
 			DrawCircle(point.position * 5, 5, Colors.White);
@@ -68,8 +64,6 @@ public override void _Ready() {
 				
 			}
 		}
-
-		done = true;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

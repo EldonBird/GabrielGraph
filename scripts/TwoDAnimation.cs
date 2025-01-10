@@ -67,10 +67,6 @@ public partial class TwoDAnimation : Node2D
 	}
 
 	public override void _Draw() {
-
-		if (done) {
-			return;
-		}
 		
 		foreach (Point point in points) {
 			
@@ -85,8 +81,6 @@ public partial class TwoDAnimation : Node2D
 				DrawLine(new Vector2(line.X * 5f, line.Y * 5f), new Vector2(line.Z * 5f, line.W * 5f), Colors.Red);
 			}
 		}
-		
-		done = true;
 	}
 
 

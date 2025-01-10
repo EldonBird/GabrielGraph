@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cec8044dq158c"]
+
+[ext_resource type="Script" path="res://scripts/ThreeDMain.cs" id="1_sbx1c"]
+[ext_resource type="Script" path="res://simple-free-look-camera-78109db3bcae477c2a28ef9fe144faa2435f0acb/camera.gd" id="2_sw3ie"]
+
+[node name="ThreeDScene" type="Node3D"]
+
+[node name="ThreeDMain" type="Node3D" parent="."]
+script = ExtResource("1_sbx1c")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("2_sw3ie")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7587, 0)
