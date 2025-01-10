@@ -13,7 +13,10 @@ public partial class ThreeDMain : Node3D {
 	
 	private float size = 500;
 	private int size3D = 5;
-	private int pointnum = 5;
+	private int pointnum = 10;
+
+	private float offsetX = 0.1f;
+	private float offsetY = 0.1f;
 
 	private Point3[] points;
 	
@@ -23,13 +26,17 @@ public partial class ThreeDMain : Node3D {
 		List<Point3> _points = new List<Point3>();
 
 
-
+	
 		for (int p = 0; p < size3D; p++) {
+			
+			Random rnd = new Random();
+			float rng = rnd.Next(-1, 1);
+
 
 			for (var i = 0; i < pointnum; i++) {
 
-				float x = (HaltonSequence.Sequence(2, i) - 0.5f) * size;
-				float y = (HaltonSequence.Sequence(3, i) - 0.5f) * size;
+				float x = (HaltonSequence.Sequence(2, i) - (offsetX * rng)) * size;
+				float y = (HaltonSequence.Sequence(3, i) - (offsetY * rng)) * size;
 
 				Vector3 position = new(x, y, p * 10);
 

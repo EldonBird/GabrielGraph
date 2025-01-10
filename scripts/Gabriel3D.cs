@@ -35,13 +35,15 @@ public static partial class Gabriel3D {
                 
                 float distance = Mathf.Sqrt((Mathf.Pow((centerpoint.X - other.position.X), 2)) 
                                           + (Mathf.Pow((centerpoint.Y - other.position.Y), 2)) 
-                                          + (Mathf.Pow(centerpoint.Z - other.position.Y, 2)));
+                                          + (Mathf.Pow((centerpoint.Z - other.position.Y), 2)));
 
                 if (distance < radius) {
                     valid = false;
                     break;
                 }
-                
+            }
+
+            if (valid) {
                 output.Add(point);
             }
 
