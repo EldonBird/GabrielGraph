@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://de4u75asxxqlm"]
+
+[ext_resource type="Script" path="res://scripts/TwoDAnimation.cs" id="1_s0abe"]
+
+[node name="2dAnimation" type="Node2D"]
+
+[node name="Main" type="Node2D" parent="."]
+script = ExtResource("1_s0abe")
+
+[node name="Camera2D" type="Camera2D" parent="."]
