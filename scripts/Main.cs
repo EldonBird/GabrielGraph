@@ -9,7 +9,7 @@ using System.Collections.Generic;
 public partial class Main : Node2D {
 	
 	private float size = 200;
-	private int pointnum = 4000;
+	private int pointnum = 500;
 
 	private Point[] points;
 
